@@ -1,9 +1,9 @@
-// pages/index.js
+// pages/blog/[slug].js
 import Head from "next/head";
-import { getBaseUrl } from "../lib/urls";
-import { buildHomeMeta } from "../lib/siteMeta";
+import { getBaseUrl } from "../../lib/urls";
+import { buildArticleMeta } from "../../lib/siteMeta";
 
-export default function Home({ meta }) {
+export default function BlogArticle({ meta }) {
   return (
     <>
       <Head>
@@ -24,15 +24,20 @@ export default function Home({ meta }) {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <h1>Homepage</h1>
-      <p>This is the homepage.</p>
+      <h1>{meta.title}</h1>
+      <p>{meta.description}</p>
     </>
   );
 }
 
-export async function getServerSideProps({ req }) {
+export async function getServerSideProps({ req, params }) {
   const baseUrl = getBaseUrl(req);
-  const meta = buildHomeMeta(baseUrl);
+  const meta = buildArticleMeta(params.slug, baseUrl);
+
+  if (!meta) {
+    // No such article → serve 404
+    return { notFound: true };
+  }
 
   return { props: { meta } };
 }
