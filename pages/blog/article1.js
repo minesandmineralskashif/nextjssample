@@ -13,7 +13,7 @@ export default function Article1() {
         />
         <meta
           property="og:url"
-          content="hhttps://statuesque-baklava-15de85.netlify.app/blog/article1"
+          content="https://statuesque-baklava-15de85.netlify.app/blog/article1"
         />
       </Head>
       <h1>Article 1</h1>
