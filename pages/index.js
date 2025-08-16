@@ -1,7 +1,7 @@
 // pages/index.js
 import Head from "next/head";
-import { getBaseUrl } from "./urls";
-import { buildHomeMeta } from "./siteMeta";
+import { getBaseUrl } from "../lib/urls";
+import { buildHomeMeta } from "../lib/siteMeta";
 
 export default function Home({ meta }) {
   return (
