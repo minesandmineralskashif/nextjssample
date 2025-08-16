@@ -9,11 +9,11 @@ export default function Article1() {
         <meta property="og:description" content="This is the first blog post" />
         <meta
           property="og:image"
-          content="https://statuesque-baklava-15de85.netlify.app//article1.jpeg"
+          content="https://statuesque-baklava-15de85.netlify.app/article1.jpg"
         />
         <meta
           property="og:url"
-          content="hhttps://statuesque-baklava-15de85.netlify.app//blog/article1"
+          content="hhttps://statuesque-baklava-15de85.netlify.app/blog/article1"
         />
       </Head>
       <h1>Article 1</h1>

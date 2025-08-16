@@ -9,11 +9,11 @@ export default function Home() {
         <meta property="og:description" content="Welcome to my site" />
         <meta
           property="og:image"
-          content="https://statuesque-baklava-15de85.netlify.app//home.png"
+          content="https://statuesque-baklava-15de85.netlify.app/home.png"
         />
         <meta
           property="og:url"
-          content="https://statuesque-baklava-15de85.netlify.app/"
+          content="https://statuesque-baklava-15de85.netlify.app"
         />
       </Head>
       <h1>Homepage</h1>
