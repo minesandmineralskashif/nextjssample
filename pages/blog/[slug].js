@@ -1,6 +1,6 @@
 // pages/blog/[slug].js
 import Head from "next/head";
-import { getBaseUrl } from "../../lib/url";
+import { getBaseUrl } from "../lib/url";
 import { buildArticleMeta } from "../lib/siteMeta";
 
 export default function BlogArticle({ meta }) {
