@@ -1,3 +1,5 @@
+// helper/siteMeta.js
+
 export const SITE_NAME = "My Next.js Site";
 
 export const DEFAULT_OG = {
@@ -7,7 +9,7 @@ export const DEFAULT_OG = {
   type: "website",
 };
 
-// Add articles here (source of truth). Later, swap this for a CMS/DB.
+// Add articles here (source of truth)
 export const ARTICLES = {
   article1: {
     title: "Article 1 - My Blog",
@@ -15,13 +17,12 @@ export const ARTICLES = {
     image: "/article1.jpg",
     type: "article",
   },
-  article1: {
+  article2: {
     title: "Article 2 - My Blog",
     description: "This is the second blog post",
     image: "/article2.jpg",
     type: "article",
   },
-  // article2: { title: "...", description: "...", image: "/article2.jpg" }
 };
 
 export function buildHomeMeta(baseUrl) {

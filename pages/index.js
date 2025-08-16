@@ -1,29 +1,17 @@
-// pages/index.js
 import Head from "next/head";
-import { getBaseUrl } from "../lib/urls";
-import { buildHomeMeta } from "../lib/siteMeta";
+import { getBaseUrl } from "../helper/url.js";
+import { buildHomeMeta } from "../helper/siteMeta.js";
 
 export default function Home({ meta }) {
   return (
     <>
       <Head>
         <title>{meta.title}</title>
-
-        {/* Open Graph */}
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="My Next.js Site" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={meta.image} />
         <meta property="og:url" content={meta.url} />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
       </Head>
-
       <h1>Homepage</h1>
       <p>This is the homepage.</p>
     </>
@@ -33,6 +21,5 @@ export default function Home({ meta }) {
 export async function getServerSideProps({ req }) {
   const baseUrl = getBaseUrl(req);
   const meta = buildHomeMeta(baseUrl);
-
   return { props: { meta } };
 }
