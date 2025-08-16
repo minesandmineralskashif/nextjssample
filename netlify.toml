@@ -2,7 +2,7 @@
   NODE_VERSION = "22.17.1"
 
 [build]
-  command = "npm run build && npm run export"
+  command = "npm run build"
   publish = "out"
 
 [[redirects]]
