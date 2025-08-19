@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove static export
-  // output: "export",
+  // ✅ Use static export instead of `next export`
+  output: "export",
 
-  // Optional: you can keep trailingSlash
-  trailingSlash: false, // or true if you prefer
-
+  // ✅ Disable image optimization (needed for static export)
   images: {
-    unoptimized: true, // keep if you want to serve images without optimization
+    unoptimized: true,
   },
+
+  // ✅ Optional: Set trailingSlash so Netlify serves `/about` as `/about/index.html`
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
