@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Fab, Tooltip } from "@mui/material";
-import { adjustments as AdjustmentsIcon } from "../icons/adjustments";
+import { Adjustments as AdjustmentsIcon } from "../icons/adjustments.js";
 import { SettingsDrawer } from "./settings-drawer";
 
 export function SettingsButton() {
